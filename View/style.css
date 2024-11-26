@@ -60,7 +60,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.delete-link {
+    color: #dc3545;
+}
 
+.delete-link:hover {
+    color: #c82333;
+}
 /* Message de succès */
 .modal-message {
     background-color: lemonchiffon;

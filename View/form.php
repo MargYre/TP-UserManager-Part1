@@ -65,6 +65,8 @@
                 <td><?php echo $user['email']; ?></td>
                 <td>
                     <a href="index.php?id=<?php echo $user['id']; ?>">Modifier</a>
+                    <a href="index.php?action=delete&id=<?php echo $user['id']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')" class="delete-link">Supprimer</a>
+
                 </td>
             </tr>
             <?php endforeach; ?>

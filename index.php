@@ -6,16 +6,27 @@ require_once 'Model/Connection.php';
 require_once 'Model/User.php';
 require_once 'Model/UserManager.php';
 
-// Création de la connexion
+
+//connexion
 $connection = new Connection();
 $userManager = new UserManager($connection->getDb());
+
+//suppression
+if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
+    $userToDelete = new User();
+    $userToDelete->setId($_GET['id']);
+    $userManager->delete($userToDelete);
+    $message = "Utilisateur supprimé avec succès!";
+    header('Location: index.php');
+    exit;
+}
 
 // Si on a un ID dans l'URL, c'est une modification
 if (isset($_GET['id'])) {
     $userToEdit = $userManager->findOne($_GET['id']);
 }
 
-// Traitement du formulaire
+//formulaire
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = new User();
     $user->hydrate($_POST);
