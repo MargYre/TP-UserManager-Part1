@@ -5,7 +5,7 @@
 
 /*General*/
 body {
-    background-color: #f1f1f1;
+    background-color: white;
     min-height: 100%;
     margin: 0;
     font-family: sans-serif;
@@ -23,6 +23,7 @@ hr {
 h1 {
     font-family: 'Glegoo', serif;
     font-size: 2em;
+    color: darkred;
 }
 /* Form */
 form {
@@ -31,3 +32,75 @@ form {
     text-align: center;
 }
 /* Buttons */
+
+/* Table styles */
+.users-list {
+    width: 80%;
+    margin: 20px auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f5f5f5;
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Message de succès */
+.modal-message {
+    background-color: lemonchiffon;
+    color: darkred;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    animation: fadeOut 0.5s ease-out 2.5s forwards;
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    box-sizing: border-box;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: darkred;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
